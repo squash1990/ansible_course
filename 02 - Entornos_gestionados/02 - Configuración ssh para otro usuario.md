@@ -26,7 +26,7 @@ De esa manera ya tendriamos creadas las claves para el usuario **ansible** y se 
 
 - Seguidamente copiamos la clave pública en el nodo manejado
 
-    `ssh-copy-id ip_máquina remonta`
+    `ssh-copy-id ip_máquina_remota`
 
     > Nota: Si no especificamos el usuario, se va a realizar la copia utilizando el usuario con el cual ejecutamos la orden
 
@@ -41,7 +41,7 @@ El siguiene paso es configurar el comando **sudo** para que el usuario **ansible
 
     Copiamos esta linea y sustituimos **root** por **ansible**
 
-    > De esta manera el usuario **ansible** puede ejecutar comandos como si fuera **root*
+    > De esta manera el usuario **ansible** puede ejecutar comandos como si fuera **root**
 
 
 **END**

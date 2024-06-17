@@ -15,7 +15,7 @@ A continuación, se indican los usuarios y contraseñas que tendremos que config
 ### Fichero **generar_entorno.sh** para desplegar el entorno
 -----
 
-- En primer lugar instalamos docker
+- En primer lugar instalamos docker:
 
     `sudo apt install docker.io`
 
@@ -58,6 +58,51 @@ A continuación, se indican los usuarios y contraseñas que tendremos que config
     docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:rw --ip 172.18.0.13 --cgroupns=host --name=tomcat2 --network=ansible apasoft/debian11-ansible
 
     ```
+
+- Ejecutamos dicho fichero para generar el entorno
+
+    `./generar_entorno.sh`
+
+### Comprobar que el entorno esta funcionando
+-----
+
+- Listamos los contenedores en ejecución:
+
+    `sudo docker ps`
+
+### Añadir los equipos al fichero **/etc/hosts**
+-----
+
+- Añadimos los nombres de los dockers al fichero **/etc/hosts** 
+
+    ```bash
+    vi /etc/hosts
+
+    172.18.0.2  debian1
+    172.18.0.3  debian2
+    172.18.0.5 rocky1
+    172.18.0.6 rocky2
+    172.18.0.8 ubuntu1
+    172.18.0.10 mysql1
+    172.18.0.12 tomcat1
+    172.18.0.13 tomcat2
+    ```
+
+    > Con esas líneas lo que conseguimos es que no tengamos que usar las direcciones ip de los contenedores, si no que, podemos realizar conexiones a los mismos utilizando su nombre
+
+
+### Generación y copia de claves públicas.
+-----
+
+- Para generar el sistema de clave pública utilizamos:
+
+    `ssh-keygen`
+
+    > De esta manera se habrá creado un directorio llamado **".ssh"** en nuestro directorio home, donde se encuentran tanto la clave pública, como la privada.
+
+- A continuación, copiamos la clave pública al los nodos gestionados. 
+
+    `ssh-copy-id "nombre_o_ip_del_nodo_gestionado"
 
 
 **END**

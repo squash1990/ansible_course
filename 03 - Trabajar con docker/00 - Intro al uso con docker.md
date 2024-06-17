@@ -7,4 +7,4 @@ En esta sección vamos a dar unas breves nociones de como hacer uso de docker pa
 
 En la siguiente imagen se pueden observar los puntos a tratar.
 
-![alt text](image.png)
+![https://github.com/squash1990](./media/image.png)

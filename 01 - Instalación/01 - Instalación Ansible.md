@@ -40,3 +40,5 @@ A continuación se enumeran los requisitos que tienen que tener los nodos maneja
     - Distribución normal, con un conjunto de módulos, plugins, playbooks, etc. 
 
 
+**END**
+

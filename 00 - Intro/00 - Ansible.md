@@ -4,7 +4,7 @@
 ### Definición 
 -----
 
-- Ansible es un producto de tipo Open Sourceque permite gestionar la configuración , la implementación , el aprovisionamiento y la automatización de nuestra infraestructura.
+- Ansible es un producto de tipo Open Source que permite gestionar la configuración , la implementación , el aprovisionamiento y la automatización de nuestra infraestructura.
 
 - Tiene gran fiabilidad, consistencia y escalabilidad
 
@@ -12,7 +12,7 @@
 
 - No necesita agentes como otros productos, sino que trabaja básicamente a través de SSH
 
-- Es fácil de utilizar ya que usa características de InfrastructureAs Code(IaC)
+- Es fácil de utilizar ya que usa características de Infrastructure As Code (IaC)
 
 - Esta técnica que permite crear ficheros de configuración, para gestionar y provisionar nuestra infraestructura sin necesidad de realizar procesos manuales
 
@@ -48,9 +48,9 @@
 
 #### Inventario
 
-- Son los ficheros donde incluimos los nodos gestionados , sus agrupaciones y otras características.
+- Son los ficheros donde incluimos los nodos gestionados, sus agrupaciones y otras características.
 
-- Este fichero puede ser totalmente estático , es decir escrito a mano y manipulado a mano o puede ser dinámico, generado a través de scripts
+- Este fichero puede ser totalmente estático, es decir escrito a mano y manipulado a mano o puede ser dinámico, generado a través de scripts
 
 #### PlayBooks y Plays
 
@@ -78,7 +78,7 @@
 
 #### Arquitectura y componentes
 
-![alt text](image.png)
+![https://github.com/squash1990](./media/image.png)
 
 ### Referencias
 
@@ -89,3 +89,6 @@ https://github.com/ansible/ansible
 https://docs.ansible.com/ansible/latest/getting_started/introduction.html
 
 https://galaxy.ansible.com
+
+
+**END**

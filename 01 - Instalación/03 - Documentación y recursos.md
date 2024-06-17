@@ -5,15 +5,16 @@ En esta sección vamos a indicar donde encontrar la documentación y vamos a ind
 ### Documentación y recursos
 -----
 
-https://docs.ansible.com -> Esta es la dirección web donde podemos encontrar la mayoria de la documentación oficial
+[Documentación Ansible](https://docs.ansible.com) -> Esta es la dirección web donde podemos encontrar la mayoria de la documentación oficial
 
 ### Visualizar modulos disponibles y su uso
 
-- Para visualizar los módulos disponibles disponemos del siguiente comando
+- Para visualizar los módulos disponibles disponemos del siguiente comando ->
     `ansible-doc -l`
 
-- Obtener información de un módulo concreto, por ejemplo, del módulo **git**
+- Obtener información de un módulo concreto, por ejemplo, del módulo **git** ->
     `ansible-doc -s git`
 
-    
+
+**END**
 

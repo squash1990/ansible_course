@@ -35,3 +35,5 @@ Ahora podemos copiar las claves directamente visualizando el fichero y copiandol
 
 En este momento se habrá creado un fichero **authorized_keys** en la máquina remota donde se habrá añadido nuestra clave pública. 
 
+
+**END**

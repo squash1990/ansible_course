@@ -30,6 +30,8 @@ Los nodos gestionados deberán tener las siguientes herramientas instaladas así
 - Copiar las claves **ssh** del usuario con el que vamos a trabajar dentro de los nodos gestionados
 
 
+**END**
+
 
 
 
