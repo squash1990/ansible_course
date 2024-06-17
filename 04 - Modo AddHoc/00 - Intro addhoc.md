@@ -3,6 +3,7 @@
 En esta sección vamos a realizar un primer acercamiento a distintos ficheros de configuración, herramientas y módulos de ansible.
 
 ### Puntos a tratar
+-----
 
 - Preparación de inventarios
 
@@ -20,3 +21,6 @@ En esta sección vamos a realizar un primer acercamiento a distintos ficheros de
 - Escalada de privilegíos 
 
 - Otros conceptos.
+
+
+**END**
