@@ -16,3 +16,7 @@ En esta sección vamos a realizar un primer acercamiento a distintos ficheros de
     - Módulo shell,
     - Módulo setup,
     - Etc. 
+
+- Escalada de privilegíos 
+
+- Otros conceptos.
