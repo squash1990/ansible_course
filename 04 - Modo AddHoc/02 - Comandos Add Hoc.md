@@ -57,12 +57,31 @@ Este módulo nos permite recuperar/obtener propiedades y carácteristicas de las
 > Este módulo nos devuelve un *json* con bastante información de la máquina remota a la cual hemos enviado la orden. 
 
 ### Módulo *copy*
+-----
 
 Este módulo nos permite realizar copia de ficheros a las máquinas remotas de manera sencilla. 
 
 - La sintaxis es la siguiente:
 
-    `ansible builtin.copy
+    `ansible -i maquinas debian1 -m copy -a "src=./prueba.txt dest=/tmp/prueba.txt"`
+
+Este es un ejemplo intuitivo de copia de un fichero llamado "prueba.txt"
+
+#### Copia de un directorio
+
+- Copia de directorios:
+
+    `ansible -i maquinas debian 1 -m copy -a "src=dir1 dest="/tmp"`
+
+Si ahora nos conectasemos a la máquina *debian1* por ssh y nos dirigieramos al directorio "/tmp", tendramos que ver tanto el fichero *prueba.txt* como el directorio *dir1*
+
+#### Atributo *modo*, es decir, permisos
+
+- Configuración de permisos (Lectura, escritura, ejecución):
+
+    `ansible -i maquina debian1 -m copy -a "src=prueba.txt dest=/tmp/prueba1.txt mode=777"`
+
+
 
 
 
