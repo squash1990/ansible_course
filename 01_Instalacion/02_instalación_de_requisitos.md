@@ -16,6 +16,10 @@
     pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
     ```
 
+- En el caso de que no tengamos *pip* instalado ejecutamos
+
+    `sudo apt install python3-pip`
+    
 ### Instalamos Ansible 
 
 1) #### Instalación mediante el sistema operativo 
@@ -41,10 +45,10 @@
 
 - Si tenemos distribuciones basadas en CentOS:
     
-    `sudo yum install epel-release`
-
     `sudo yum install ansible`
 
+    `sudo yum install ansible-core`
+    
 2) #### Instalación mediante PIP
 
     En esta sección vamos a ver como instalarlo mediante la herramienta PIP
@@ -57,7 +61,7 @@
 
 - Una vez instalado, ejecutamos el siguiente comando para ver la versión instalada 
     ```bash
-    squash@11LAP8PYJ2T3:~$ ansible --version
+    squash@localhost:~$ ansible --version
     ansible [core 2.16.7]   
         config file = None
         configured module search path = ['/home/squash/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
