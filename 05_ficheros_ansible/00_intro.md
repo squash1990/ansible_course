@@ -17,3 +17,8 @@ Los puntos a tratar en esta sección son los siguientes:
 - Realizaremos una breve configuración de visual estudio code para el tratamiento de los ficheros de ansible 
 
 - Haremos una breve introducción al fomato **yaml**
+
+
+**END**
+
+

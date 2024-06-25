@@ -3,7 +3,7 @@
 A continuación vamos a análizar los ficheros principales de configuración de ansible, así como su estructura, su ubicación en el sistema, etc ...
 
 -----
-- Tags: #ansible #ficheros_configuración
+- Tags: #ansible #ficheros_configuración #Estructura
 -----
 
 ### Definición
@@ -26,9 +26,9 @@ No es la únicamanera de configurar ansible:
 
 ##### El fichero principal de ansible se denomina **ansible.cfg**
 
-- Este fichero esta formado por un conjunto de opciones y propiedades que ya tienen un valor predefinido y que yo necesito cambiar a través de este fichero
+- Este fichero esta formado por un conjunto de opciones y propiedades que ya tienen un valor predefinido y que yo necesito cambiar a través de este fichero.
 
-- Por tanto, solo necesito modificar el fichero si quiero cambiar algún valor original
+- Por tanto, solo necesito modificar el fichero si quiero cambiar algún valor original.
 
  ### Ubicación
  -----
@@ -45,9 +45,9 @@ No es la únicamanera de configurar ansible:
 
 > Si no encuentra, ninguno de estos ficheros, *ansible* nos mostrará un error. 
 
-> Hay que tener en cuenta que si hemos realizado la instalación mediante un gestor de paquetes, entonces el fichero, se encontrara en el directorio *"/etc/ansible/ansible.cfg"*.
+> Hay que tener en cuenta que si hemos realizado la instalación mediante un gestor de paquetes, entonces el fichero se encontrará en el directorio *"/etc/ansible/ansible.cfg"*.
 
-> Si hemos realizado la instalación mediante **pip*, tenemos que generarlo incialmente, aunque algunos generan uno den el directorio del usuario.
+> Si hemos realizado la instalación mediante **pip**, tenemos que generarlo incialmente, aunque algunos generan uno en el directorio del usuario.
 
 ### Generar el fichero de configuración. 
 -----
@@ -69,7 +69,7 @@ Para no volvernos locos en caso de que no encontremos el fichero de configuraci�
 
 > En este caso, ansible nos informará sobre la ubicación del fichero. 
 
-### Estrctura del fichero
+### Estructura del fichero
 ----- 
 
 - El fichero de configuración, normalmente suele tener la siguiente estructura
@@ -84,7 +84,9 @@ Para no volvernos locos en caso de que no encontremos el fichero de configuraci�
     become_ask_pass=True
     ```
 
-    > Como se puede observar, normalmente suele estar estructurado de manera **(Propiedad = Valor)**
+    > Como se puede observar, normalmente suele estar estructurado de manera **(Propiedad = Valor)**. 
+
+    > Al ser un fichero de tipo **INI** se pueden realizar agrupacioens. 
 
 - Los campos mas populares y que formarían parte de la sección **[privilege_escalation]** son: 
 
@@ -92,3 +94,12 @@ Para no volvernos locos en caso de que no encontremos el fichero de configuraci�
 	- become_method: (sudo, por ejemplo) -> método de escalado
 	- become_user: usuario de escalado
 	- become_ask_pass: (true/false) -> si debe pedir la contraseña
+
+- Se pueden poner comentarios.
+
+    - **#**. Con el uso de la almohadilla, para comentar toda la línea
+
+    - **;**. Para comentar partes de la línea. 
+
+
+**END**
