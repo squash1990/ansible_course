@@ -66,7 +66,7 @@ hacer, no lo hará.
 
     `ansible-playbook nombre_playbook.yaml`
 
-##### Hay parámetros que podemos configurar tanto en el archivo **ansible.cfg** con dentro de un **playbook** y lo haremos dentro de los datos principales. Estos son: 
+#### Hay parámetros que podemos configurar tanto en el archivo **ansible.cfg** con dentro de un **playbook** y lo haremos dentro de los datos principales. Estos son: 
 
  - name: nombre del playbook
  - hosts: utiliza patrones para ver en qué nodos debe ejecutarse el playbook
@@ -75,7 +75,7 @@ hacer, no lo hará.
  - become_method: tiene la misma funcionalidad que en el **ansible.cfg**
  - become_user: tiene la misma funcionalidad que en el **ansible.cfg**
 
-##### Existen otras maneras de ejecutar un playbook, como en el modo paso a paso, comprobación, etc...
+#### Existen otras maneras de ejecutar un playbook, como en el modo paso a paso, comprobación, etc...
 
 - Ejecución paso a paso
 
