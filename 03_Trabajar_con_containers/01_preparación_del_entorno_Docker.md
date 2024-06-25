@@ -88,7 +88,7 @@ A continuación, se indican los usuarios y contraseñas que tendremos que config
     172.18.0.13 tomcat2
     ```
 
-    > Con esas líneas lo que conseguimos es que no tengamos que usar las direcciones ip de los contenedores, si no que, podemos realizar conexiones a los mismos utilizando su nombre
+    > Con esas líneas lo que conseguimos es que no tengamos que usar las direcciones ip de los contenedores, si no que, podemos realizar conexiones a los mismos utilizando su nombre.
 
 
 ### Generación y copia de claves públicas.
@@ -102,7 +102,7 @@ A continuación, se indican los usuarios y contraseñas que tendremos que config
 
 - A continuación, copiamos la clave pública al los nodos gestionados. 
 
-    `ssh-copy-id "nombre_o_ip_del_nodo_gestionado"
+    `ssh-copy-id "nombre_o_ip_del_nodo_gestionado"`
 
 
 **END**

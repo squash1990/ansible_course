@@ -7,6 +7,7 @@ Sección vamos a analizar de maner más detallada los ficheros que conforman o q
 -----
 
 ### Puntos a tratar
+-----
 
 Los puntos a tratar en esta sección son los siguientes:
 
