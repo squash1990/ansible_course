@@ -43,6 +43,17 @@ El siguiene paso es configurar el comando **sudo** para que el usuario **ansible
 
     > De esta manera el usuario **ansible** puede ejecutar comandos como si fuera **root**
 
+- También podremos añadirlo directamente al grupo sudo y para ello deberemos: 
+
+    ```bash
+	su -
+	# Si estamos en based-distros debian
+	usermod -aG sudo nombre_usuario 
+	
+	# Si estamos en based-distros redHat
+	usermod -aG wheel nombre_usuario 
+    ```
+
 
 **END**
 
