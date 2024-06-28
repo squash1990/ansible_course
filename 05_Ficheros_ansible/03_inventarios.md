@@ -231,6 +231,25 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 	}
 	```
 
+- Agrupando todos los comandos para comprobar la conectividad de las máquinas podemos utilizar los siguientes comandos:
+
+	```bash
+	# Con el primer inventario
+	ansible all -i inventory -m ping
+
+	# Con el inventario configurado con dns
+	ansible all -i inventory-dns -m ping
+
+	# Con el inventario con grupos y patrones
+	ansible all -i inventory_groups -m ping
+
+	# Con una sola máquina
+	ansible ubuntu1 -m ping
+
+	# Consulta utilizando patrones
+	ansible websevers -m ping
+	```
+
 ### Referencias
 
 [^1]: Pagina web de IAML -> [YAML](https://yaml.org)

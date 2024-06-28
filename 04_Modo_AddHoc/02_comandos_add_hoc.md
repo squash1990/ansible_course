@@ -81,6 +81,8 @@ Si ahora nos conectasemos a la máquina *debian1* por ssh y nos dirigieramos al 
 
     `ansible -i maquina debian1 -m copy -a "src=prueba.txt dest=/tmp/prueba1.txt mode=777"`
 
+##### Hay una gran lista de módulos de ansible disponibles en su documentación . Por ejemplo, aquí tenemos la documentación del modulo **apt**. [Doc APT módule](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)
+
 
 
 
