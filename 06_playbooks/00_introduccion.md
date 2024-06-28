@@ -4,7 +4,7 @@ En esta sección vamos a dar introdución a los ficheros pilares de Ansible, es 
 
 -----
 - Tags: #ansible #playbooks #plays #tareas #yaml
- -----
+-----
 
 ### Puntos a tratar
 -----

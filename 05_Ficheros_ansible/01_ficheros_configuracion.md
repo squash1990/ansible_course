@@ -31,7 +31,7 @@ No es la únicamanera de configurar ansible:
 - Por tanto, solo necesito modificar el fichero si quiero cambiar algún valor original.
 
  ### Ubicación
- -----
+-----
 
  Este fichero se puede encontrar en los siguientes sitios: 
 
