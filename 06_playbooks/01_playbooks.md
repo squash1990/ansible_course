@@ -48,8 +48,7 @@ Aunque hay diferentes secciones dentro de un **playbook** podemos decir que est�
     ...  
     ```
 
-- Las tareas se ejecutan en orden y de manera idempotente, es decir, que si no hay nada que 
-hacer, no lo hará.
+- Las tareas se ejecutan en orden y de manera idempotente, es decir, que si no hay nada que hacer, no lo hará.
 
 - Se intentan evitar los módulos command, shell  y raw, ya que estos son los únicos que no son idempotentes, es decir, se ejecutarán si o si.
 
