@@ -44,7 +44,7 @@
 
 - Son los servidores que van a ser gestionados por Ansible.
 
-- Esstos servidores se encuentran reflejados dentro de un inventario, que nos permite agruparlos y manipularlos de forma sencilla.
+- Estos servidores se encuentran reflejados dentro de un inventario, que nos permite agruparlos y manipularlos de forma sencilla.
 
 #### Inventario
 
