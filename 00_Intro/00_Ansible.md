@@ -38,7 +38,7 @@
 
 - Son los servidores desde los que se ejecuta Ansible y se lanzan los comandos contra los servidores gestionados.
 
-- Funcionan sobre entornos Linux , aunque puedo utilizar el módulo WSL De Windows para que funcionen dentro de Windows Server.
+- Funcionan sobre entornos Linux, aunque puedo utilizar el módulo WSL De Windows para que funcionen dentro de Windows Server.
 
 #### Manages Nodes
 
@@ -50,7 +50,7 @@
 
 - Son los ficheros donde incluimos los nodos gestionados, sus agrupaciones y otras características.
 
-- Este fichero puede ser totalmente estático, es decir escrito a mano y manipulado a mano o puede ser dinámico, generado a través de scripts
+- Este fichero puede ser totalmente estático, es decir escrito a mano y manipulado a mano o puede ser dinámico, generado a través de scripts.
 
 #### PlayBooks y Plays
 
