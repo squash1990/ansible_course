@@ -86,7 +86,7 @@ https://www.ansible.com/
 
 https://github.com/ansible/ansible
 
-https://docs.ansible.com/ansible/latest/getting_started/introduction.html
+https://docs.ansible.com/ansible/latest/
 
 https://galaxy.ansible.com
 

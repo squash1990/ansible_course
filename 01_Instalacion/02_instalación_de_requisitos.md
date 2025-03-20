@@ -36,7 +36,7 @@
     - En el caso de que no encuentre el paquete de ansible tendremos que añadir el repositorio concreto:
 
         `sudo add-apt-repository --yes --update ppa:ansible/ansible`
-        
+    
     - Seguidamente volvemos a ejecutar los anteriores comandos
 
 - Si tenemos la distribución fedora:
