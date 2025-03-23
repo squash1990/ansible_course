@@ -50,7 +50,7 @@ El siguiene paso es configurar el comando **sudo** para que el usuario **ansible
 	# Si estamos en based-distros debian
 	usermod -aG sudo nombre_usuario 
 	
-	# Si estamos en based-distros redHat
+	# Si estamos en based-distros redHat y SUSE
 	usermod -aG wheel nombre_usuario 
     ```
 

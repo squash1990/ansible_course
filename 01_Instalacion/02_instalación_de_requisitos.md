@@ -48,11 +48,15 @@
     `sudo yum install ansible`
 
     `sudo yum install ansible-core`
-    
+
+- Si tenemos distribuciones basadas en openSUSE, SUSE:
+
+	`sudo zypper install ansible`
+
 2) #### Instalación mediante PIP
 
     En esta sección vamos a ver como instalarlo mediante la herramienta PIP
-    
+
 - Instalamos la versión global de ansible utilizando pip3 mediante en siguiente comando:
 
     `python3 -m pip install ansible `
