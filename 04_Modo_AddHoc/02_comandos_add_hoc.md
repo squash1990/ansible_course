@@ -5,7 +5,7 @@ Ansible tiene la ventaja de ejecutar módulos de manera individual. Aunque no es
 ### Definición
 -----
 
-Un comando *add hoc*  es una orden que ejecuta de manera rápida una instrucción contral las máquinas especificadas. 
+Un comando *add hoc*  es una orden que ejecuta de manera rápida una instrucción contra las máquinas especificadas. 
 
 Aunque tiene mucha utilidad poder ejecutar ordenes de esta manera, tiene problema y es que no son reutilizables, es decir, no se pueden automatizar. 
 
@@ -23,8 +23,8 @@ Tiene un pequeño inconveniente, y es que este módulo no se ejecuta sobre una s
     `ansible -i maquinas debian1 -m command -a "date"`
 
     > Análizamos los *nuevos parámetros* de este comando: 
-    - **"command"** -> Parámetro con el que indicamos cual vamos a poder utilizar ordenes de cli.
-    - **"-a"** -> "arguments". Flag que nos permite utilizar argumentos. En este caso nuestro argumeto es el comando que queremos lanzar contra la máquina remota. 
+    - **"command"** -> Parámetro con el que indicamos que vamos a utilizar ordenes de cli.
+    - **"-a"** -> "arguments". Flag que nos permite utilizar argumentos. En este caso nuestro argumento es el comando que queremos lanzar contra la máquina remota. 
 
 - Más ejemplo: 
 
@@ -32,7 +32,7 @@ Tiene un pequeño inconveniente, y es que este módulo no se ejecuta sobre una s
 
     `ansible -i maquinas debian1 -m command -a "touch /tmp/f1.txt"`
 
-> El comando **touch** de *linux*, es un comando que te crea un fichero si no existe o te modifica la fecha de modificación del fichero si existe. 
+> El comando **touch** de *linux*, es un comando que crea un fichero si no existe o modifica la fecha de modificación del fichero, si existe. 
 
 ### Módulo *shell*
 -----
@@ -42,13 +42,14 @@ Al contrario que *command*, **shell** si tiene esta función.
 - La sintaxis de este comando es la que sigue:
 
     `ansible -i maquinas debian1 -m shell -a "touch /tmp/f1.txt | grep p"`
+    `ansible -i maquinas rocky1 -m shell -a "ls -la / | grep opt"`
 
 > Vemos que la sintaxis es muy parecida a la de comando **command**
 
 ### Módulo *setup*
 -----
 
-Este módulo nos permite recuperar/obtener propiedades y carácteristicas de las máquinas remotas
+Este módulo nos permite recuperar/obtener propiedades y características de las máquinas remotas, es decir, información del sistema al cual enviamos la solicitud. 
 
 - La sintaxis es la que sigue:
 
@@ -73,7 +74,7 @@ Este es un ejemplo intuitivo de copia de un fichero llamado "prueba.txt"
 
     `ansible -i maquinas debian 1 -m copy -a "src=dir1 dest="/tmp"`
 
-Si ahora nos conectasemos a la máquina *debian1* por ssh y nos dirigieramos al directorio "/tmp", tendramos que ver tanto el fichero *prueba.txt* como el directorio *dir1*
+Si ahora nos conectasemos a la máquina *debian1* por ssh y nos dirigiéramos al directorio "/tmp", tendríamos que ver tanto el fichero *prueba.txt* como el directorio *dir1*
 
 #### Atributo *modo*, es decir, permisos
 

@@ -2,7 +2,7 @@
 
 Atendiendo a este apartado, con escalada de privilegios nos referimos a la situación en la que queremos ejecutar comandos ansible utilizando un usuario con el cual no estoy logueado. 
 
-Por ejemplo, si queremos realizar una instalación de un paquete del sistema opeartivo, nuestro usuario no lo puede hacer, a no ser que, hayamos preparado dicho usuario dentro de la máquina remota para que pueda ejecutar **sudo** o conozcamos la *password de root* 
+Por ejemplo, si queremos realizar una instalación de un paquete del sistema operativo, nuestro usuario no lo puede hacer, a no ser que, hayamos preparado dicho usuario dentro de la máquina remota para que pueda ejecutar **sudo** o conozcamos la *password de root* 
 
 ### Método de utilización
 -----
@@ -13,7 +13,7 @@ Internamente esta utilidad utiliza comandos habituales cómo **sudo**, **su**, *
 
 #### Directivas de *become*
 
-Este método utiliza una seríe de directivas que hay que especificar para realizar correctamente la escalada
+Este método utiliza una serie de directivas que hay que especificar para realizar correctamente la escalada
 
 - **become** -> Activa la escalada de privilegios.
 - **become_user** -> Usuario en el cual queremos convertirnos.

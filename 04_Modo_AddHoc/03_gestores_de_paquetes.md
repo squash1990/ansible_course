@@ -1,4 +1,4 @@
-# Módulos Yum, apt, service
+# Módulos Yum(dnf), apt, service
 
 Ansible dispone de módulos para la manipulación de paquetes de un sistema, es decir, instalar, buscar, eliminar paquetes
 
@@ -13,7 +13,7 @@ Este módulo nos permite gestionar los paquetes en distribuciónes basadas en *R
 
 - La sintaxis de este comando es la siguiente:
 
-    `ansible -i maquinas rocky1 -m yum -a "name=httpd state=present"`
+    `ansible -i maquinas rocky1 -m yum(dnf) -a "name=httpd state=present"`
 
     > Análizamos los *nuevos parámetros* de este comando: 
     - **"yum"** -> Módulo que utilizamos para gestionar los paquetes
