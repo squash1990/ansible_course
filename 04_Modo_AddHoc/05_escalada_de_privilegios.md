@@ -13,7 +13,7 @@ Internamente esta utilidad utiliza comandos habituales cómo **sudo**, **su**, *
 
 #### Directivas de *become*
 
-Este método utiliza una serie de directivas que hay que especificar para realizar correctamente la escalada
+Este método utiliza una serie de directivas que hay que especificar para realizar correctamente la escalada.
 
 - **become** -> Activa la escalada de privilegios.
 - **become_user** -> Usuario en el cual queremos convertirnos.
