@@ -12,3 +12,5 @@ A continuación, vamos a realizar una instalación de un servidor web apache en 
 
     `ansible -i maquinas debian1 -m service -a "name=apache2 state=started"`
 
+
+**END**
