@@ -61,3 +61,5 @@ Aunque no es optimo, ya que es una configuarción que a nivel de seguridad, es i
 
     > Podemos ver que en este caso, al estar configurado el fichero */etc/sudoers* para que no nos pida contraseña al utilizar **sudo**, no nos da error.
 
+
+**END**

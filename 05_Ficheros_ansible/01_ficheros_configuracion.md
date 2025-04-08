@@ -1,6 +1,6 @@
 # Ficheros de configuración de Ansible
 
-A continuación vamos a análizar los ficheros principales de configuración de ansible, así como su estructura, su ubicación en el sistema, etc ...
+A continuación vamos a analizar los ficheros principales de configuración de ansible, así como su estructura, su ubicación en el sistema, etc ...
 
 -----
 - Tags: #ansible #ficheros_configuración #Estructura
