@@ -26,7 +26,7 @@ No es la únicamanera de configurar ansible:
 
 ##### El fichero principal de ansible se denomina **ansible.cfg**
 
-- Este fichero esta formado por un conjunto de opciones y propiedades que ya tienen un valor predefinido y que yo necesito cambiar a través de este fichero.
+- Este fichero esta formado por un conjunto de opciones y propiedades que ya tienen un valor predefinido y que se necesita cambiar a través de este fichero.
 
 - Por tanto, solo necesito modificar el fichero si quiero cambiar algún valor original.
 
@@ -49,7 +49,8 @@ No es la únicamanera de configurar ansible:
 
 > Si hemos realizado la instalación mediante **pip**, tenemos que generarlo incialmente, aunque algunos generan uno en el directorio del usuario.
 
-### Generar el fichero de configuración. 
+
+### Generar el fichero de configuración manualmente.
 -----
 
 En el caso de que el fichero de configuración no se haya generado, utilizamos el siguiente comando para generarlo. 
@@ -57,6 +58,9 @@ En el caso de que el fichero de configuración no se haya generado, utilizamos e
 - Generación del fichero **Ansible.cfg**
 
     `ansible-config init --disabled > ansible.cfg`
+
+	>El flag **--disabled ** crea el fichero con todas las lineas comentadas
+
 
 ### Saber la ubicación del fichero **ansible.cfg**
 -----
@@ -68,6 +72,7 @@ Para no volvernos locos en caso de que no encontremos el fichero de configuraci�
     ![ansible --version](./media/image.png)
 
 > En este caso, ansible nos informará sobre la ubicación del fichero. 
+
 
 ### Estructura del fichero
 ----- 
@@ -90,10 +95,10 @@ Para no volvernos locos en caso de que no encontremos el fichero de configuraci�
 
 - Los campos mas populares y que formarían parte de la sección **[privilege_escalation]** son: 
 
-	- become: (true/false) -> Usado para especificar como escalar privilegios
-	- become_method: (sudo, por ejemplo) -> método de escalado
-	- become_user: usuario de escalado
-	- become_ask_pass: (true/false) -> si debe pedir la contraseña
+	- **become**: (true/false) -> Usado para especificar como escalar privilegios
+	- **become_method**: (sudo, por ejemplo) -> método de escalado
+	- **become_user**: usuario de escalado
+	- **become_ask_pass**: (true/false) -> si debe pedir la contraseña
 
 - Se pueden poner comentarios.
 

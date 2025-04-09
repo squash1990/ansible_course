@@ -1,6 +1,6 @@
 # Fichero de configuración de ansible de ejemplo
 
-Análizamos un fichero de configuración completo de ejemplo
+Analizamos un fichero de configuración completo de ejemplo
 
 -----
 - Tags: #ansible #fichero_configuración
@@ -9,7 +9,7 @@ Análizamos un fichero de configuración completo de ejemplo
 ### Fichero de configuración **Por defecto**
 -----
 
-Es el fichero predeterminado de [ansible](../00_Intro/00_Ansible.md) y puede ser muy amplio, ya que contiene numerosas configuraciones, como puden ser variables, plugins, etc.
+Es el fichero predeterminado de [ansible](../00_Intro/00_Ansible.md) y puede ser muy amplio, ya que contiene numerosas configuraciones, como pueden ser variables, plugins, etc.
 
 ### Fichero de configuración personalizado
 -----

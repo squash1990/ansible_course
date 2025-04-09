@@ -1,6 +1,6 @@
 # Inventarios de Ansible
 
-Análizamos los ficheros correspondientes a los invetarios de máquinas que tenemos en [Ansible](../00_Intro/00_Ansible.md).
+Analizamos los ficheros correspondientes a los inventarios de máquinas que tenemos en [Ansible](../00_Intro/00_Ansible.md).
 
 -----
 - Tags: #ansible #inventarios
@@ -9,15 +9,15 @@ Análizamos los ficheros correspondientes a los invetarios de máquinas que tene
 ### Definición
 -----
 
- Es un fichero donde quedan resgistrados todos los nodos manejados o equipos, servidores a los cuales nos queremos conectar y realizar tareas.
+ Es un fichero donde quedan registrados todos los nodos manejados o equipos, servidores a los cuales nos queremos conectar y realizar tareas.
 
  Puede ser un único fichero, una lista o usar plugins más avanzados y dinámicos que nos permitan personalizar los datos
 
- Para construir este tipo de ficheros, se pueden usuar distingos formatos, como *YAML*, *INI*, etc. 
+ Para construir este tipo de ficheros, se pueden usar distintos formatos, como *YAML*, *INI*, etc. 
 
  - Por defecto, ansible busca el fichero úbicado en **/etc/ansible/hosts**, pero hay que dejar constancia que mediante el uso del flag **"-i"** podemos indicar otra ubicación 
 
-    `ansible -i inventory_file`
+    `ansible -i 'inventory_file'`
 
 ### Estructura de los ficheros
 -----
@@ -53,13 +53,13 @@ Análizamos los ficheros correspondientes a los invetarios de máquinas que tene
 
 En primer lugar definimos lo que es **yaml**[^1]. YAML es el lenguaje de serialización de datos utilizado por [Ansible](../00_Intro/00_Ansible.md) para la definición de los ficheros de definición de tareas (playbooks).
 
-- Sus caracteristicas principales son: 
+- Sus características principales son: 
 
 	- Legible
 	- Independiente del lenguaje
 	- Unicode
 	- Sirve para serializar datos de objetos
-	- Se pruede leer de una sola vez
+	- Se puede leer de una sola vez
 	- etc.
 
 - Su sintaxis general:
@@ -141,7 +141,7 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 - En primer lugar visualizamos un inventario de ejemplo:
 
 	```bash
-	cat -np inventory
+	$ cat inventory
 	172.17.0.2
 	172.17.0.3
 	172.17.0.4
@@ -151,7 +151,7 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 - A continuación podemos realizar un ping en ansible para comprobar que funciona correctamente:
 
 	```bash
-	ansible all -i inventory -m ping
+	$ ansible all -i inventory -m ping
 
 	172.17.0.2 | SUCCESS => {
     "ansible_facts": {
@@ -179,7 +179,7 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 - Otra manera mas ordenada sería: 
 
 	```bash
-	ansible-inventory -i inventory --list
+	$ ansible-inventory -i inventory --list
 	{
 	    "_meta": {
 	        "hostvars": {}
@@ -204,7 +204,7 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 - Ahora vamos a crear otro inventario pero con dns:
 	
 	```bash
-	cat -np inventory-dns
+	$ cat inventory-dns
 	ubuntu1
 	ubuntu2
 	ubuntu3
@@ -231,9 +231,15 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 	}
 	```
 
+### Cheat sheet inventario Ansible
+-----
+
 - Agrupando todos los comandos para comprobar la conectividad de las máquinas podemos utilizar los siguientes comandos:
 
 	```bash
+	# Consulta de los host disponibles en el inventario
+	ansible -i maquinas all --list-host
+	
 	# Con el primer inventario
 	ansible all -i inventory -m ping
 
