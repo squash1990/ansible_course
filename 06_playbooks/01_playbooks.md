@@ -1,6 +1,6 @@
 # Playbooks
 
-A continuación vamos a análizar y la estructura y uso de los playbooks que se consideran la base del objetivo de [Ansible](../00_Intro/00_Ansible.md).
+A continuación vamos a análizar y la estructura y uso de los playbooks que se consideran la base del objetivo de [Ansible](00_Ansible.md).
 
 -----
 - Tags: #ansible #playbooks
@@ -9,24 +9,24 @@ A continuación vamos a análizar y la estructura y uso de los playbooks que se 
 ### Definición
 -----
 
-Un playbook es un tipo de fichero que se utiliza a modo de plantilla permitiendonos ejecutar todo tipo de comandos, tareas, entornos complejos dentro de ansible de manera automatizada. 
+Un playbook es un tipo de fichero que se utiliza a modo de plantilla permitiéndonos ejecutar todo tipo de comandos, tareas, entornos complejos dentro de ansible de manera automatizada. 
 
-- El formato de estos ficheros es **YAML**
-- Son ficheros que empiezan con tres guiones **---** y terminan con tres **...**
+- El formato de estos ficheros es **YAML**.
+- Son ficheros que empiezan con tres guiones **---** y terminan con tres **...**.
 - Las cadenas de caracteres las podemos meter entre comillas simples o dobles.  
 
 ### Estructura
 -----
 
-Aunque hay diferentes secciones dentro de un **playbook** podemos decir que están compuestos de tareas que se pueden combinar en un componente denomiado *play* y a su vez varios plays conforman un ***playbook***
+Aunque hay diferentes secciones dentro de un **playbook** podemos decir que están compuestos de tareas que se pueden combinar en un componente denomiado *play* y a su vez varios plays conforman un ***playbook***.
 
 - Dentro de los playbooks podemos tener los siguientes componentes o acciones:
 
     - ***hosts***    -> Máquinas o nodos donde se va a aplicar el playbook.
     - ***vars***     -> Variables del play.
-    - ***Tasks***    -> Lista de tareas a ejecutar en el Play
+    - ***Tasks***    -> Lista de tareas a ejecutar en el Play.
     - ***Handlers*** -> Tareas que se ejecutan solo ante algún cambio.
-    - ***Roles***    -> Roles a ser importados. Cargan recursos de forma ordenda
+    - ***Roles***    -> Roles a ser importados. Cargan recursos de forma ordenada.
 
 - Ejemplo de playbook: 
 
@@ -59,7 +59,7 @@ Aunque hay diferentes secciones dentro de un **playbook** podemos decir que est�
 
 - En primer lugar para comprobar la sintaxis de un fichero **YAML** podemos hacer uso del comando:
 
-	`ansible-playbook -syntax-check playbook.yaml`
+	`ansible-playbook --syntax-check playbook.yaml`
 
 - Para ejecutar un playbook usaremos la siguiente sintaxis
 
@@ -67,12 +67,12 @@ Aunque hay diferentes secciones dentro de un **playbook** podemos decir que est�
 
 #### Hay parámetros que podemos configurar tanto en el archivo **ansible.cfg** con dentro de un **playbook** y lo haremos dentro de los datos principales. Estos son: 
 
- - name: nombre del playbook
- - hosts: utiliza patrones para ver en qué nodos debe ejecutarse el playbook
- - remote_user: define el usuario remoto a utilizar
- - become: tiene la misma funcionalidad que en el **ansible.cfg**
- - become_method: tiene la misma funcionalidad que en el **ansible.cfg**
- - become_user: tiene la misma funcionalidad que en el **ansible.cfg**
+ - *name*: nombre del playbook
+ - *hosts*: utiliza patrones para ver en qué nodos debe ejecutarse el playbook
+ - *remote_user*: define el usuario remoto a utilizar
+ - *become*: tiene la misma funcionalidad que en el **ansible.cfg**
+ - *become_method*: tiene la misma funcionalidad que en el **ansible.cfg**
+ - *become_user*: tiene la misma funcionalidad que en el **ansible.cfg**
 
 #### Existen otras maneras de ejecutar un playbook, como en el modo paso a paso, comprobación, etc...
 

@@ -1,6 +1,6 @@
 # Inventarios de Ansible
 
-Analizamos los ficheros correspondientes a los inventarios de máquinas que tenemos en [Ansible](../00_Intro/00_Ansible.md).
+Analizamos los ficheros correspondientes a los inventarios de máquinas que tenemos en [Ansible](00_Ansible.md).
 
 -----
 - Tags: #ansible #inventarios
@@ -51,7 +51,7 @@ Analizamos los ficheros correspondientes a los inventarios de máquinas que tene
 
 #### ***Fichero YAML***
 
-En primer lugar definimos lo que es **yaml**[^1]. YAML es el lenguaje de serialización de datos utilizado por [Ansible](../00_Intro/00_Ansible.md) para la definición de los ficheros de definición de tareas (playbooks).
+En primer lugar definimos lo que es **yaml**[^1]. YAML es el lenguaje de serialización de datos utilizado por [Ansible](00_Ansible.md) para la definición de los ficheros de definición de tareas (playbooks).
 
 - Sus características principales son: 
 
@@ -94,6 +94,29 @@ En primer lugar definimos lo que es **yaml**[^1]. YAML es el lenguaje de seriali
 	    ubuntu4:
 	```
 
+- Otro ejemplo: 
+
+	```yaml
+	all:
+	  hosts:
+	    tomcat2:
+	  children:
+	    debian:
+	      hosts:
+	        debian1:
+	        debian2:
+	    rocky:
+	      hosts:
+	        rocky1:
+	        rocky2:
+	    servidores_datos:
+	      hosts:
+	        mysql1:
+	    servidores_web:
+	      hosts:
+	        tomcat1:
+	```
+
 #### ***Grupos de máquinas***
 
 > Como podemos ver se puden crear grupos de equipos o servidores para racionalizar el uso de despliegues.
@@ -101,6 +124,10 @@ En primer lugar definimos lo que es **yaml**[^1]. YAML es el lenguaje de seriali
 - Hay al menos dos grupos predefinidos
 
     - **ALL**. Contiene todos los servidores dentro del inventario
+
+		`ansible all -m ping` -> En este caso utiliza el inventario definido en el fichero **ansible.cfg**.
+		`ansible -i maquinas.yaml all -m ping` -> En este caso se especifica el inventario.
+
     - **UNGROUPED**. Contiene los servidores que no se han asociado a ningún grupo
 
 		`ansible ungrouped -m ping` 
@@ -200,6 +227,53 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 	}
 	```
 
+- Otro ejemplo:
+
+	```bash
+	$ ansible-inventory -i maquinas.yaml --list
+	{
+	    "_meta": {
+	        "hostvars": {}
+	    },
+	    "all": {
+	        "children": [
+	            "ungrouped",
+	            "debian",
+	            "rocky",
+	            "servidores_datos",
+	            "servidores_web"
+	        ]
+	    },
+	    "debian": {
+	        "hosts": [
+	            "debian1",
+	            "debian2"
+	        ]
+	    },
+	    "rocky": {
+	        "hosts": [
+	            "rocky1",
+	            "rocky2"
+	        ]
+	    },
+	    "servidores_datos": {
+	        "hosts": [
+	            "mysql1"
+	        ]
+	    },
+	    "servidores_web": {
+	        "hosts": [
+	            "tomcat1"
+	        ]
+	    },
+	    "ungrouped": {
+	        "hosts": [
+	            "tomcat2"
+	        ]
+	    }
+	}
+	
+	```
 
 - Ahora vamos a crear otro inventario pero con dns:
 	
@@ -254,6 +328,9 @@ Para usar los fichero, ya hemos indicado que tenemos que usar las opción **-i**
 
 	# Consulta utilizando patrones
 	ansible websevers -m ping
+
+	# Consultando el ansible-inventory
+	ansible-inventory -i maquinas.yaml --list
 	```
 
 ### Referencias

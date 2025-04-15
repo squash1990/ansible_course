@@ -3,6 +3,7 @@
 En este apartado vamos a realizar algunos ejemplos prácticos para dejar asentado el uso de comandos *add-hoc*
 
 ### Ejemplos
+-----
 
 #### Con el módulo **command** averiguar los sistemas de ficheros de la máquina **tomcat1**:
 

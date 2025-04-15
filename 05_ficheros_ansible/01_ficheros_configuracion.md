@@ -69,7 +69,7 @@ Para no volvernos locos en caso de que no encontremos el fichero de configuraci�
 
 - Saber la ubicación del fichero:
 
-    ![ansible --version](./media/image.png)
+    ![ansible --version](02_courses/linux/ansible_course/05_ficheros_ansible/media/image.png)
 
 > En este caso, ansible nos informará sobre la ubicación del fichero. 
 

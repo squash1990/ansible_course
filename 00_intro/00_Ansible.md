@@ -78,7 +78,7 @@
 
 #### Arquitectura y componentes
 
-![https://github.com/squash1990](./media/image.png)
+![https://github.com/squash1990](02_courses/linux/ansible_course/00_intro/media/image.png)
 
 ### Referencias
 

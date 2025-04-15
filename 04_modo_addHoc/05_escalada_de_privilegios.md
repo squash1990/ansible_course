@@ -50,10 +50,10 @@ Finalmente vemos que el comando *apt* se ejecuta con normalidad para instalar el
 ### Ejemplos de escalar privilegios sin que nos pida contraseña
 -----
  
-Una de las formas para realizar este ejemplo sería realiar los pasos que se indican en el apartado -> [Acceso sin Password](../02_Entornos_gestionados/03_acceso_sin_password.md). 
+Una de las formas para realizar este ejemplo sería realiar los pasos que se indican en el apartado -> [Acceso sin Password](03_acceso_sin_password.md). 
 Aunque no es optimo, ya que es una configuarción que a nivel de seguridad, es incorrecta. 
 
-#### Escalada de privilegios utilizando [Acceso sin Password](../02_Entornos_gestionados/03_acceso_sin_password.md). 
+#### Escalada de privilegios utilizando [Acceso sin Password](03_acceso_sin_password.md). 
 
 - **(-b)**. Para realizar un **become**. Ejecutamos el siguiente comando:
 

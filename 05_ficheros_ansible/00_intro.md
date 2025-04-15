@@ -1,6 +1,6 @@
 # Introducción a los ficheros de configuración de ansible, inventarios, etc
 
-Sección vamos a analizar de maner más detallada los ficheros que conforman o que son necesarios para lograr el objetivo de [ansible](../00_Intro/00_Ansible.md).
+Sección vamos a analizar de maner más detallada los ficheros que conforman o que son necesarios para lograr el objetivo de [ansible](00_Ansible.md).
 
 -----
 - Tags: #ansible #ficheros_configuración #inventario #vscode #yaml
