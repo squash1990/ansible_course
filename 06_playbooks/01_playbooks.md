@@ -83,3 +83,6 @@ Aunque hay diferentes secciones dentro de un **playbook** podemos decir que est√
 - O en modo comprobaci√≥n **haciendo uso del flag -C**
 
 	`ansible-playbook -C fichero.yaml`
+
+
+**END**
