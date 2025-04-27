@@ -55,14 +55,15 @@ Si el mensaje definido en el playbook anterior, se quiere que este dentro de una
 ---
 - name: Prueba de variables en playbooks.
   hosts: debian1
-  vars: # Definimos la sección vars
-    - mensaje: "Esto es una prueba de uso de variables en playbooks de ansible" # Definimos el mensaje
-    - curso: "Curso de ansible de 0 a pro"
+  vars: { # Definimos la sección vars
+    mensaje: "Esto es una prueba de uso de variables en playbooks de ansible", # Definimos el mensaje
+    curso: "Curso de ansible de 0 a pro"
+  }
 
   tasks:
   - name: Ver el contenido de las variables utilizando el módulo debug.
     debug:
-      msg: "{{mensaje}}. {{curso}}" # Esta es la forma de utilizar la variable, encerrada entre dos llaves.
+      msg: "{{ mensaje }}. {{ curso }}" # Esta es la forma de utilizar la variable, encerrada entre dos llaves.
 ...
 ```
 
