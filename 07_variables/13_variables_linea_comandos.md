@@ -1,4 +1,4 @@
-# Variables desde linea de comandos
+# Variables desde linea de comandos. extra-vars
 
 -----
 - Tags: #ansible #variables_externas #variables_task #variables_desde_linea_comandos #extra-vars
