@@ -60,36 +60,36 @@ En primer lugar vamos a crear un playbook para modificar el fichero **motd** de 
 
 - Fichero **ansible.cfg**
 
-```ini
-[defaults]
-inventory = ./maquinas.yaml
-deprecation_warnings=false 
-
-[privilege_escalation]
-become = true
-become_method = sudo
-become_user = root
-become_ask_pass = true
-```
+	```
+	[defaults]
+	inventory = ./maquinas.yaml
+	deprecation_warnings=false 
+	
+	[privilege_escalation]
+	become = true
+	become_method = sudo
+	become_user = root
+	become_ask_pass = true
+	```
 
 ##### A continuación, se va a realizar utilizando variables:
 
 - Modificamos el playbook anterior para que el mensaje este contenido en una variable
 
-```yaml
----
-- name: Prueba con variables para personalizar motd
-  hosts: debian1
-  vars:
-    mensaje: "Hello squash. Here again? Do you know you are welcome? You are a good sysadmin"
-
-  tasks:
-  - name: Customizar motd, mensaje de bienvenida
-    copy:
-      content: "{{ mensaje }}"
-      dest: /etc/motd
-...
-```
+	```yaml
+	---
+	- name: Prueba con variables para personalizar motd
+	  hosts: debian1
+	  vars:
+	    mensaje: "Hello squash. Here again? Do you know you are welcome? You are a good sysadmin"
+	
+	  tasks:
+	  - name: Customizar motd, mensaje de bienvenida
+	    copy:
+	      content: "{{ mensaje }}"
+	      dest: /etc/motd
+	...
+	```
 
 ##### A continuación, se va a realizar utilizando un array con tres elementos:
 

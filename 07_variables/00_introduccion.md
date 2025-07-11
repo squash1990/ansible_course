@@ -3,7 +3,7 @@
 Sección en la cual se pretende dar una visión amplia de lo que implica el uso de variables en [00_Ansible](00_Ansible.md)
 
 -----
-- Tags: #ansible #variables #registradas #fact
+- Tags: #ansible #variables #registradas #fact #playbooks
 -----
 
 ### Puntos a tratar
